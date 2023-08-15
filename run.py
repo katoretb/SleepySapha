@@ -16,7 +16,7 @@ images_path = glob.glob(r"C:\Users\test\Desktop\sleepysapha\dataset\*.jpg")
 
 
 layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # Insert here the path of your images
